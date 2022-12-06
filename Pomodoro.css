@@ -1,6 +1,9 @@
 body {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
-    font-size:xx-large;
+    font-size:x-large;
+    background-color: #e6e6e6;
+    color:#4a4a4a;
+    padding:5px 10px;
     
 }
 
@@ -9,7 +12,6 @@ body {
     justify-content: center;
     margin-top:3em;
 }
-
 
 .timer {
     display: flex;
@@ -28,13 +30,59 @@ body {
     padding: 10px;
 }
 
+h3{
+    font-family: sans-serif;
+    font-weight: lighter;
+    padding:2px 2px;
+}
+
+button{
+    padding:0.5em 1em
+}
+
+/* CLASSES */
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top:3em;
+}
+
+.centered-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.start{
+    margin-top: 1em;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 5px 0px #888888;
+    border:solid 1px #4a4a4a;
+    color:#4a4a4a;
+    font-family: sans-serif;
+    padding:5px 10px;
+}
+
+.stop{
+    margin-top: 1em;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 5px 0px #888888;
+    border:solid 1px #4a4a4a;
+    color:#4a4a4a;
+    font-family: sans-serif;
+    padding:5px 10px;
+}
+
+.button-row{
+    display: flex;
+    column-gap:0.5em;
+    
+}
+
 .message {
     display: flex;
     justify-content: center;
-    padding: 10px;
-}
-.stop {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+    margin-top:3em;
 }

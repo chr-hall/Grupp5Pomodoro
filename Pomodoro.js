@@ -4,46 +4,54 @@ const messageArea = document.querySelector(".message")
 
 
 var userMinutes = 0;
-
-var seconds = 5;
+var seconds = 0;
 var minutes = userMinutes;
 var isPaused = false;
-
+var isStopped = false;
 
 
 function startCount() {
-    let secondsTimer = setInterval(secondsCount, 1000);
+    let secondsTimer = setInterval(secondsCount, 1000);     //Set interval timer
+    minutes = userMinutes;
 
     function secondsCount() {
 
-        if (seconds == 0) {
+        if (seconds == 0) {     //Minute counter
             seconds = 60;
             minutes--;
 
-            if (minutes < 0) {
+            if (minutes < 0) {  //Break time when time is up
                 breakTime();
             }
 
         }
 
-        seconds--;
+        seconds--;  //Count down seconds
 
         secondsArea.innerText = seconds;
         minutesArea.innerText = minutes;
 
+        if (isStopped) {    //Stop timer, reset text fields
+            clearInterval(secondsTimer);
+            isStopped = !isStopped;
+            seconds = 0;
+            secondsArea.innerText = "";
+            minutesArea.innerText = "";
+            messageArea.innerText = "";
+        }
 
     }
 }
 
-function breakTime() {
+function breakTime() {  //Change timer to 5 minutes for break
     isPaused = !isPaused;
 
     if (isPaused) {
         messageArea.innerText = "Take a break!"
-        seconds = 5;
-        minutes = 0;
+        seconds = 60;
+        minutes = 4;
     } else {
-        messageArea.innerText = "Keep on working!"
+        messageArea.innerText = "Keep on working!"  //Reset timer after break
         seconds = 5;
         minutes = userMinutes;
     }
