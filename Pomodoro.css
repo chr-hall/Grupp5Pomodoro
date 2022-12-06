@@ -10,6 +10,7 @@ body {
     margin-top:3em;
 }
 
+
 .timer {
     display: flex;
     padding:30px;
@@ -25,4 +26,15 @@ body {
 
 .minutes {
     padding: 10px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.stop {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
 }
