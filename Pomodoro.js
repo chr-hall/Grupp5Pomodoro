@@ -19,11 +19,10 @@ function startCount() {
         if (seconds == 0) {     //Minute counter
             seconds = 60;
             minutes--;
+        }
 
-            if (minutes < 0) {  //Break time when time is up
-                breakTime();
-            }
-
+        if (minutes < 0) {  //Break time when time is up
+            breakTime();
         }
 
         seconds--;  //Count down seconds

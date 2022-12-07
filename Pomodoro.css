@@ -5,7 +5,7 @@
 
 
 body {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    font-family: digitalReadout;
     font-size:x-large;
     background-color: #e6e6e6;
     color:#4a4a4a;
@@ -21,7 +21,6 @@ body {
 
 .timer {
     position: absolute;
-    font-family: digitalReadout;
     font-size: 70px;
     display: flex;
     padding:30px;
