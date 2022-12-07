@@ -1,6 +1,17 @@
 const secondsArea = document.querySelector(".seconds")
 const minutesArea = document.querySelector(".minutes")
 const messageArea = document.querySelector(".message")
+const btn = document.getElementById('btn');
+const startBtn = document.getElementById('startBtn');
+
+
+btn.addEventListener('click', function onClick(event) {
+  event.target.style.backgroundColor = "#e6e6e6";
+});
+
+startBtn.addEventListener('click', function onClick(event) {
+    event.target.style.backgroundColor = "#b3d9c3";
+});
 
 
 var userMinutes = 0;
@@ -27,8 +38,8 @@ function startCount() {
 
         seconds--;  //Count down seconds
 
-        secondsArea.innerText = seconds;
-        minutesArea.innerText = minutes;
+        secondsArea.innerText = seconds < 10 ? "0"+seconds : seconds;
+        minutesArea.innerText = minutes < 10 ? "0"+minutes : minutes;
 
         if (isStopped) {    //Stop timer, reset text fields
             clearInterval(secondsTimer);
@@ -46,6 +57,7 @@ function breakTime() {  //Change timer to 5 minutes for break
     isPaused = !isPaused;
 
     if (isPaused) {
+        console.log("Breaktime")
         messageArea.innerText = "Take a break!"
         seconds = 60;
         minutes = 4;
@@ -54,4 +66,12 @@ function breakTime() {  //Change timer to 5 minutes for break
         seconds = 5;
         minutes = userMinutes;
     }
+}
+
+function hide() {
+    result.classList.add("hidden")
+}
+
+function show() {
+    result.classList.remove("hidden")
 }
