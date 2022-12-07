@@ -1,3 +1,9 @@
+@font-face {
+    font-family: digitalReadout;
+    src: url(Fonts/SfDigitalReadoutHeavy-AwVg.ttf);
+  }
+
+
 body {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     font-size:x-large;
@@ -14,10 +20,14 @@ body {
 }
 
 .timer {
+    position: absolute;
+    font-family: digitalReadout;
+    font-size: 70px;
     display: flex;
     padding:30px;
     background-color: white;
     width: 350px;
+    height: 100px;
     box-shadow: 0px 0px 5px 0px #888888;
     justify-content: center;
 }
