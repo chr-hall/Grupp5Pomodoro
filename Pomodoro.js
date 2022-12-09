@@ -20,7 +20,7 @@ startBtn.addEventListener('click', function onClick(event) {
 hide();
 
 var userMinutes = 0;
-var seconds = 60;
+var seconds = 0;
 var minutes = userMinutes;
 var isPaused = false;
 var isStopped = false;
@@ -33,7 +33,7 @@ function startCount() {
     function secondsCount() {
 
         if (seconds == 0) {     //Minute counter
-            seconds = 5;
+            seconds = 60;
             minutes--;
         }
 
